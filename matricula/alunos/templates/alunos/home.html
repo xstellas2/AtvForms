@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página Inicial</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Bem-vindo ao Sistema de Matrícula</h2>
+        <p><a href="{% url 'cadastro_aluno' %}">Cadastrar Aluno</a></p>
+        <p><a href="{% url 'lista_alunos' %}">Listar Alunos</a></p>
+    </div>
+</body>
+</html>

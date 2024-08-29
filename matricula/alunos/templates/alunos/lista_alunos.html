@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Lista de Alunos</title>
+   {% load static %}
+   <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Lista de Alunos Cadastrados</h2>
+        <ul>
+            {% for aluno in alunos %}
+            <li>{{ aluno.nome }} - {{ aluno.curso }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

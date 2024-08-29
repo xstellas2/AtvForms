@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Matrícula de Aluno</title>
+   {% load static %}
+   <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <form method="post">
+        <h2>Matrícula de Aluno</h2>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Cadastro</button>
+    </form>
+</body>
+</html>
