@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Matrícula de Aluno</title>
-   {% load static %}
-   <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    <title>Matrícula de Aluno</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 </head>
 <body>
-    <form method="post">
+    <div>
         <h2>Matrícula de Aluno</h2>
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Cadastro</button>
-    </form>
+        <form method="post">
+            {% csrf_token %}
+            <div>
+                {{ form.nome.label_tag }}<br>
+                {{ form.nome }}
+            </div>
+            <div>
+                {{ form.endereco.label_tag }}<br>
+                {{ form.endereco }}
+            </div>
+            <div>
+                {{ form.cidade.label_tag }}<br>
+                {{ form.cidade }}
+            </div>
+            <div>
+                {{ form.email.label_tag }}<br>
+                {{ form.email }}
+            </div>
+            <div>
+                {{ form.curso.label_tag }}<br>
+                {{ form.curso }}
+            </div>
+            <button type="submit">Cadastro</button>
+        </form>
+    </div>
 </body>
 </html>
